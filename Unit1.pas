@@ -40,8 +40,12 @@ type
     Label2: TLabel;
     RadioButton8: TRadioButton;
     Image9: TImage;
-    Button7: TButton;
     Shape1: TShape;
+    Timer1: TTimer;
+    MainMenu1: TMainMenu;
+    N11: TMenuItem;
+    N21: TMenuItem;
+    N31: TMenuItem;
     procedure Button1click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button5Click(Sender: TObject);
@@ -56,14 +60,18 @@ type
     procedure Image7Click(Sender: TObject);
     procedure Image8Click(Sender: TObject);
     procedure Image9Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure N11Click(Sender: TObject);
+    procedure N21Click(Sender: TObject);
   private
     { Private-Deklarationen }
   public
     { Public-Deklarationen }
   end;
 
-var x1, x2, x3, y1, y2, y3 : integer;
-    a : real;
+var x1, x2, x3, y1, y2, y3, f : integer;
+    a, l, z : real;
   Form1: TForm1;
 
 implementation
@@ -79,6 +87,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
 pagecontrol1.ActivePageIndex:=0;
 image1.canvas.Rectangle(1,1,1,1);
+
 end;
 
 procedure TForm1.Button5Click(Sender: TObject);
@@ -355,6 +364,32 @@ end;
 procedure TForm1.Image9Click(Sender: TObject);
 begin
 radiobutton8.Checked:=true;
+end;
+
+
+
+
+procedure TForm1.Button7Click(Sender: TObject);
+begin
+timer1.Enabled:=true;
+end;
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+begin
+z:=z+f;
+l:=l+z;
+shape1.Left:=round(l);
+f:=0;
+end;
+
+procedure TForm1.N11Click(Sender: TObject);
+begin
+f:=2;
+end;
+
+procedure TForm1.N21Click(Sender: TObject);
+begin
+f:=-3;
 end;
 
 end.

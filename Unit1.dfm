@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 190
-  Top = 105
-  Width = 1024
-  Height = 923
+  Left = 192
+  Top = 274
+  Width = 1108
+  Height = 585
   Caption = 'Form1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -10,6 +10,7 @@ object Form1: TForm1
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  Menu = MainMenu1
   OldCreateOrder = False
   WindowState = wsMaximized
   OnCreate = FormCreate
@@ -18,8 +19,8 @@ object Form1: TForm1
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 1016
-    Height = 896
+    Width = 1092
+    Height = 527
     ActivePage = TabSheet4
     Align = alClient
     TabOrder = 0
@@ -1089,10 +1090,11 @@ object Form1: TForm1
         OnClick = Image9Click
       end
       object Shape1: TShape
-        Left = 256
-        Top = 160
-        Width = 105
-        Height = 57
+        Left = 248
+        Top = 96
+        Width = 113
+        Height = 73
+        Brush.Color = clLime
       end
       object RadioButton1: TRadioButton
         Left = 32
@@ -1174,18 +1176,33 @@ object Form1: TForm1
         TabOrder = 7
         Visible = False
       end
-      object Button7: TButton
-        Left = 872
-        Top = 224
-        Width = 75
-        Height = 25
-        Caption = 'Button7'
-        TabOrder = 8
-      end
     end
     object TabSheet5: TTabSheet
       Caption = 'TabSheet5'
       ImageIndex = 4
+    end
+  end
+  object Timer1: TTimer
+    Interval = 25
+    OnTimer = Timer1Timer
+    Left = 508
+    Top = 344
+  end
+  object MainMenu1: TMainMenu
+    Left = 652
+    Top = 272
+    object N11: TMenuItem
+      Caption = '1'
+      ShortCut = 112
+      OnClick = N11Click
+      object N21: TMenuItem
+        Caption = '2'
+        ShortCut = 113
+        OnClick = N21Click
+      end
+      object N31: TMenuItem
+        Caption = '3'
+      end
     end
   end
 end
