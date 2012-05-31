@@ -40,8 +40,6 @@ type
     Label2: TLabel;
     RadioButton8: TRadioButton;
     Image9: TImage;
-    Button7: TButton;
-    Shape1: TShape;
     procedure Button1click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button5Click(Sender: TObject);
