@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 686
-  Top = 358
-  Width = 1108
-  Height = 585
+  Left = 190
+  Top = 105
+  Width = 1024
+  Height = 923
   Caption = 'Form1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -18,8 +18,8 @@ object Form1: TForm1
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 1100
-    Height = 558
+    Width = 1016
+    Height = 896
     ActivePage = TabSheet4
     Align = alClient
     TabOrder = 0
