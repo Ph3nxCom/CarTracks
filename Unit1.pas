@@ -47,6 +47,7 @@ type
     N21: TMenuItem;
     N31: TMenuItem;
     Button7: TButton;
+    Button8: TButton;
     procedure Button1click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button5Click(Sender: TObject);
@@ -65,6 +66,7 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure N11Click(Sender: TObject);
     procedure N21Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
   private
     { Private-Deklarationen }
   public
@@ -375,20 +377,20 @@ end;
 
 procedure TForm1.Button7Click(Sender: TObject);
 begin
-//timer1.Enabled:=true;
 shape1.Visible:=true;
 shape1.Left:=startx;
 shape1.Top:=starty;
+f:=0;
+z:=0;
+l:=0;
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
 begin
-z:=0;
-l:=startx;
 z:=z+f;
 l:=l+z;
-shape1.Left:=round(l);
-
+shape1.Left:=round(l+startx);
+f:=0;
 end;
 
 procedure TForm1.N11Click(Sender: TObject);
@@ -399,6 +401,11 @@ end;
 procedure TForm1.N21Click(Sender: TObject);
 begin
 f:=-3;
+end;
+
+procedure TForm1.Button8Click(Sender: TObject);
+begin
+shape1.Visible:=false;
 end;
 
 end.

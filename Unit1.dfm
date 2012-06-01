@@ -1178,12 +1178,21 @@ object Form1: TForm1
       end
       object Button7: TButton
         Left = 984
-        Top = 696
+        Top = 704
         Width = 105
         Height = 33
         Caption = 'Fahrzeug platzieren'
         TabOrder = 8
         OnClick = Button7Click
+      end
+      object Button8: TButton
+        Left = 984
+        Top = 744
+        Width = 105
+        Height = 33
+        Caption = 'Stop'
+        TabOrder = 9
+        OnClick = Button8Click
       end
     end
     object TabSheet5: TTabSheet
