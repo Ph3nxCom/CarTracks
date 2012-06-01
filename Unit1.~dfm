@@ -1090,10 +1090,10 @@ object Form1: TForm1
         OnClick = Image9Click
       end
       object Shape1: TShape
-        Left = 984
-        Top = 744
-        Width = 89
-        Height = 41
+        Left = 248
+        Top = 96
+        Width = 113
+        Height = 73
         Brush.Color = clLime
       end
       object RadioButton1: TRadioButton
@@ -1159,8 +1159,8 @@ object Form1: TForm1
         Visible = False
       end
       object RadioButton7: TRadioButton
-        Left = 760
-        Top = 712
+        Left = 768
+        Top = 720
         Width = 81
         Height = 81
         Caption = 'RadioButton7'
@@ -1175,15 +1175,6 @@ object Form1: TForm1
         Caption = 'RadioButton8'
         TabOrder = 7
         Visible = False
-      end
-      object Button7: TButton
-        Left = 984
-        Top = 696
-        Width = 105
-        Height = 33
-        Caption = 'Fahrzeug platzieren'
-        TabOrder = 8
-        OnClick = Button7Click
       end
     end
     object TabSheet5: TTabSheet

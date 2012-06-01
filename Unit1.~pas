@@ -46,7 +46,6 @@ type
     N11: TMenuItem;
     N21: TMenuItem;
     N31: TMenuItem;
-    Button7: TButton;
     procedure Button1click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Button5Click(Sender: TObject);
@@ -71,7 +70,7 @@ type
     { Public-Deklarationen }
   end;
 
-var x1, x2, x3, y1, y2, y3, f, StartX, StartY : integer;
+var x1, x2, x3, y1, y2, y3, f : integer;
     a, l, z : real;
   Form1: TForm1;
 
@@ -88,7 +87,6 @@ procedure TForm1.FormCreate(Sender: TObject);
 begin
 pagecontrol1.ActivePageIndex:=0;
 image1.canvas.Rectangle(1,1,1,1);
-shape1.Visible:=false;
 
 end;
 
@@ -301,8 +299,6 @@ if radiobutton7.Checked=true then begin
  image1.Canvas.Pen.Width:=1;
  image1.Canvas.Brush.Color:=clgreen;
  image1.Canvas.Polygon([point(x1+20,y1+30),point(x1+20,y1+70),point(x1+70,y1+50)]);
- startx:=x1+50;
- starty:=y1+50;
  end;
 if radiobutton8.Checked=true then begin
  x3:=mouse.CursorPos.x-image1.left;
@@ -375,20 +371,15 @@ end;
 
 procedure TForm1.Button7Click(Sender: TObject);
 begin
-//timer1.Enabled:=true;
-shape1.Visible:=true;
-shape1.Left:=startx;
-shape1.Top:=starty;
+timer1.Enabled:=true;
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
 begin
-z:=0;
-l:=startx;
 z:=z+f;
 l:=l+z;
 shape1.Left:=round(l);
-
+f:=0;
 end;
 
 procedure TForm1.N11Click(Sender: TObject);
